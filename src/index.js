@@ -77,6 +77,7 @@ const fetchImagesFunc = async () => {
   try {
     const images = await fetching.fetchImages();
     if (images.totalHits === 0) {
+      refs.loadMoreBtn.classList.add('is-hidden');
       Notify.failure(
         `Sorry, there are no images matching your search query. Please try again.`
       );
