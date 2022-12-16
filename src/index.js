@@ -19,6 +19,7 @@ const onSearch = e => {
   e.preventDefault();
   refs.gallery.innerHTML = '';
   fetching.query = e.currentTarget.elements[0].value.trim();
+  fetching.page = 1;
   fetchImagesFunc();
   refs.loadMoreBtn.classList.remove('is-hidden');
 };
